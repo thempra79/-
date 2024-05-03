@@ -1,0 +1,9 @@
+@function calculate-margin-top($marg-top) {
+    @if $marg-top > 20px {
+      @return $marg-top + 5px;
+     } @else if $marg-top > 10px {
+      @return $marg-top + 10px;
+    } @else {
+      @return $marg-top;
+     }
+   }

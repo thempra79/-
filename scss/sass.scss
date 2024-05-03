@@ -1,0 +1,611 @@
+@import "./peremen.scss";
+@import "./mixin.scss";
+@import "./functions.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.jaketsheader{
+  display:$tabl;
+  grid-template-columns:200px 1fr 200px ;
+  grid-template-rows: 80px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:2;
+}
+
+.wrapmenu{
+  grid-column: 1 / 2;
+}
+
+.logo{
+  grid-column: 2 / 3;
+  @include mixin-flex;
+  
+}
+
+.logo img{
+height:220px;
+margin-top:calculate-margin-top($marg-top);
+}
+
+.registration{
+  grid-column: 3 / 4;
+  color:white;
+  align-self: $align;
+  font-size:$main-font-size;
+  font-family:$font;
+}
+
+/* menu */
+ul {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ul li {
+  position: relative;
+  list-style-type: none;
+  float: left;
+  width: 100px;
+  margin-top: 0px;
+}
+
+ul a {
+  font-size:20px;
+  font-family:$font;
+  font-weight:bold;
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  padding: 15px;
+  padding-left:0px;
+  color: white;
+  height: 25px;
+  margin-top: 0px;
+  background-color: black;
+}
+
+.second {
+  display: none;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  opacity: 0;
+}
+
+.menu li ul {
+  display: block;
+}
+
+.menu>li div {
+  font-family:$font;
+  font-size:40px;
+  font-weight:bold;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/kurs.png');
+  background-size: contain;
+  @include back-img;
+  transition: transform 0.3s ease, left 0.3s ease;
+}
+
+.menu .li4 .pim {
+  background-position: 0 -60px;
+  transition: transform 0.3s ease, left 0.3s ease;
+}
+
+.menu .li4 .pim.clicked {
+  transform: rotate(180deg) translateX(50px);
+  left: 100px;
+}
+/* menu */
+/*HEADER*/
+
+/*VIDEO*/
+.video{
+display:$tabl;
+grid-template-columns: 1fr;
+grid-template-rows: 750px;
+}
+
+.video img{
+width:100%;
+height:100%;
+}
+/*VIDEO*/
+
+
+/*Product*/
+.container{
+  margin-top:30px;
+  display:$tabl;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap:40px;
+}
+
+
+img{
+  height:330px;
+  width:250px;
+}
+figure {
+  @include mixin-flex;
+  flex-direction: column;
+  
+}
+figcaption{
+  font-family:$font;
+  text-align:center;
+  font-size:$main-font-size;
+} 
+/*Product*/
+/*login*/
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  padding: 8px 12px;
+  background-color: rgb(72, 72, 72);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: rgb(72, 72, 72);
+}
+
+.toggle-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container1 {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-self: $align;
+  z-index:1;
+}
+
+.loginmenu{
+  display:$tabl;
+  grid-template-columns: 1fr;
+  grid-template-rows: 700px;
+  padding-top:80px;
+}
+
+.html2{
+  background-image: url("../images/DeWatermark.ai_1708945674045.jpg");
+  background-size: cover;
+  @include back-img;
+}
+
+footer{
+  font-family:$font;
+  display:$tabl;
+  grid-template-rows: 100px 40px 40px;
+  background-color: black;
+}
+
+.author{
+  grid-row:3 / 4;
+  align-self: $align;
+  color:white;
+  text-align: center;
+}
+
+.insta{
+  justify-content: center;
+  gap:100px;
+  display:flex;
+  flex-direction: row;
+  grid-row:1 / 2;
+  text-align:center;
+  align-self: $align;
+  color:white;
+}
+
+.info{
+  grid-row:2 / 3;
+  align-self: $align;
+  color:white;
+  justify-content: center;
+  flex-direction: row;
+  text-align:center;
+}
+/*login*/
+
+.infocont{
+  font-family:$font;
+display:$tabl;
+grid-template-columns: 600px 1fr;
+grid-template-rows:repeat(8, 1fr);
+}
+.infocont div{
+border:3px solid black;
+}
+
+.data{
+display:$tabl;
+grid-template-rows: repeat(3,1fr);
+}
+
+
+.prodcont{
+margin-top:80px;
+display:$tabl;
+grid-template-columns: repeat(2,1fr);
+padding-bottom:200px;
+}
+
+.prefooter{
+  display:$tabl;
+  grid-template-columns: 1fr;
+  grid-template-rows: 550px;
+}
+
+.prefooter img{
+width:100%;
+height:100%;
+}
+.newphoto{
+display:none;
+}
+.image{
+width:500px;
+height: 600px;
+}
+
+.firstcolumn{
+grid-column:1;
+@include mixin-flex;
+}
+
+.secondcolumn{
+grid-column:2;
+}
+
+
+.prodinfo{
+  
+display:$tabl;
+grid-template-columns: 1fr;
+grid-template-rows:1fr 1fr 1fr 1fr 1fr 400px;
+grid-row-gap:20px;
+}
+
+name{
+  font-family:$font;
+font-size:40px;
+text-align:center;
+grid-row:1;
+}
+
+price{
+  font-family:$font;
+font-size:$product-name-size;
+grid-row:2;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+description{
+font-size:25px;
+grid-row:6;
+font-weight: bold;
+}
+
+.opis{
+  font-family:$font;
+grid-row:5;
+display: flex;
+flex-direction: row;
+justify-content: center;
+font-size:40px;
+font-weight: bold;
+}
+
+.blocks{
+  font-family:$font;
+grid-row:4;
+grid-column: 1/4;
+display:$tabl;
+grid-template-columns: repeat(3,110px);
+grid-gap:20px;
+justify-content: center;
+}
+
+.blocks div:active{
+background-color:black;
+color:white;
+}
+.blocks div{
+  @include mixin-flex;
+flex-direction: row;
+border:3px solid black;
+font-size:$product-name-size;
+font-weight: bold;
+}
+
+.zakaz{
+grid-row:3;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.zakbutton{
+  font-family:$font;
+width:50%;
+height: 100%;
+font-size:$product-name-size;
+color:white;
+background-color: black;
+}
+
+
+.html4{
+background: url(../images/DeWatermark.ai_1708945674045.jpg);
+background-size:cover;
+}
+
+.bodybuy {
+  @include mixin-flex;
+height: 100vh;
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+.card-form {
+width: 400px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #f5f5f5;
+}
+
+.card-form label {
+display: block;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+.card-form input[type="text"],
+.card-form input[type="number"],
+.card-form select {
+width: 100%;
+padding: 5px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+.card-form button {
+width: 100%;
+padding: 10px;
+background-color: rgb(72, 72, 72);
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.infocont1{
+  width:800px;
+  font-size:$main-font-size;
+}
+
+.text1{
+  font-family:$font;
+align-items: center;
+@include mixin-flex;
+  width:100%;
+  height:700px;
+  
+}
+
+.infoback{
+background-image: url(../images/DeWatermark.ai_1708945674045.jpg);
+background-size: cover;
+}
+
+h1{
+margin-top:100px;
+text-align: center;
+font-family:$font;
+}
+.text1{
+height:1000px;
+}
+
+span{
+  font-weight: bold;
+}
+
+@media(max-width: 1100px){
+  
+description{
+  font-size:25px;
+}
+.prodcont{
+  margin-top:80px;
+  display:$tabl;
+  grid-template-columns:1fr;
+}
+.image{
+  width:450px;
+  height: 550px;
+}
+
+.firstcolumn{
+  grid-column:1;
+  @include mixin-flex;
+  }
+  
+  .secondcolumn{
+  grid-column:1;
+  }
+
+  .prodinfo{
+    display:$tabl;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 500px;
+    grid-row-gap:20px;
+    }
+    
+    
+.jaketsheader{
+grid-template-columns:110px 1fr 130px ;
+}
+.registration{
+font-size:14px;
+text-align:center;
+}
+figure img{
+width:150px;
+height:200px;
+}
+
+.prefooter {
+grid-template-rows: 200px;
+}
+.card-form input[type="text"],
+.card-form input[type="number"],
+.card-form select {font-size:20px;
+}
+  .card-form {
+    font-size:30px;
+  }
+}
+
+@media(max-width: 825px){
+.container{
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(4,1fr);
+  grid-gap:20px;
+}
+
+  .infocont1{
+    width:800px;
+    font-size:$main-font-size;
+  }
+  .text1{
+    height:1200px;
+  }
+
+}
+
+@media(max-width: 500px){
+
+  .text1{
+    height:1400px;
+  }
+.logo img{
+  width:190px;
+}
+figure img{
+width:150px;
+height:200px;
+}
+
+.registration{
+  font-size:14px;
+  text-align:center;
+}
+  .firstcolumn img{
+      height:300px;
+      width:200px;
+  }
+  .container{
+      grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+      grid-template-rows: repeat(8,1fr);
+      grid-gap:20px;
+  }
+  .jaketsheader{
+      grid-template-columns:110px 1fr 130px ;
+  }
+  .gifka {
+    display:none;
+  }
+
+  .newphoto{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  .prodcont{
+    margin-top:80px;
+    display:$tabl;
+    grid-template-columns:1fr;
+  }
+  .image{
+    width:400px;
+    height: 500px;
+  }
+
+  .firstcolumn{
+    grid-column:1;
+    @include mixin-flex;
+    }
+    
+    .secondcolumn{
+    grid-column:1;
+    }
+
+    .prodinfo{
+      display:$tabl;
+      grid-template-columns: 1fr;
+      grid-template-rows:1fr 1fr 1fr 1fr 1fr 500px;
+      grid-row-gap:20px;
+      }
+      
+      
+description{
+font-size:$main-font-size;
+}
+.prefooter {
+grid-template-rows: 200px;
+}
+
+name{
+font-size:25px;
+}
+
+.insta{
+  gap:50px;
+}
+}
