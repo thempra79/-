@@ -609,3 +609,12 @@ font-size:25px;
   gap:50px;
 }
 }
+
+@media(max-width: 430px){
+.registration{
+  font-size: 14px;
+}
+.logo img{
+  width:100px;
+}
+}
