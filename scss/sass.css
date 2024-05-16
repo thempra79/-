@@ -531,6 +531,9 @@ span {
   }
 }
 @media (max-width: 500px) {
+  .container1 {
+    width: 350px;
+  }
   .text1 {
     height: 1400px;
   }
